@@ -6,16 +6,20 @@
     <link rel='stylesheet' type='text/css' href="~/css/styles.css"/>
   </head>
     <body>
-      <h1>Cd Organizer</h1>
-        <ul>
-          @foreach (var cd in Model)
-          {
-            <li><a href='/cds/@cd.GetId()'>@cd.GetTitle()</a></li>
-          }
-        </ul>
-        <a href='/cds/new'>Add new Cd</a>
-        <form action="/cds/delete" method="post">
-          <button type="submit" name="button">Clear All Items</button>
-        </form>
+      <div class="container">
+        <h1>Cd Organizer</h1>
+          <ul>
+            @foreach (var cd in Model)
+            {
+              <li><a href='/cds/@cd.GetId()'>@cd.GetTitle()</a></li>
+            }
+          </ul>
+          <a href='/cds/new'>Add new Cd</a>
+          <br>
+          <br>
+          <form action="/cds/delete" method="post">
+            <button class="btn btn-primary btn-lg btn-block" type="submit" name="button">Clear All Items</button>
+          </form>
+      </div>
     </body>
 </html>

@@ -6,12 +6,16 @@
     <link rel='stylesheet' type='text/css' href="~/css/styles.css"/>
   </head>
   <body>
-    <h1>Cd Organizer</h1>
-      <h3>Add a new Cd:<h3>
-        <form action='/cds' method='post'>
-          <label for='new-cd'>Cd Title</label>
-          <input id='new-cd' name = 'new-cd' type='text'>
-          <button type='submit'>Add Cd</button>
-        </form>
+    <div class="container">
+      <h1>Cd Organizer</h1>
+        <h3>Add a new Cd:<h3>
+          <form action='/cds' method='post'>
+            <label for='new-cd'>Cd Title</label>
+            <input id='new-cd' name = 'new-cd' type='text'>
+            <br>
+            <br>
+            <button class="btn btn-primary btn-lg btn-block" type='submit'>Add Cd</button>
+          </form>
+    </div>
   </body>
 </html>
