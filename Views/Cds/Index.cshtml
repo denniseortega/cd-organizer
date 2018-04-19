@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cds</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' href="~/css/styles.css"/>
+  </head>
+    <body>
+      <h1>Cd Organizer</h1>
+        <ul>
+          @foreach (var cd in Model)
+          {
+            <li><a href='/cds/@cd.GetId()'>@cd.GetTitle()</a></li>
+          }
+        </ul>
+        <a href='/cds/new'>Add new Cd</a>
+        <form action="/cds/delete" method="post">
+          <button type="submit" name="button">Clear All Items</button>
+        </form>
+    </body>
+</html>
